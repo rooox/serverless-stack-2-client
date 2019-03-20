@@ -1,4 +1,8 @@
 const dev = {
+  STRIPE_KEY: "pk_test_pzhRgrSDBYNVy5cObgEcIPkJ006rwmyKCA",
+  STRIPE_KEY: "pk_test_pzhRgrSDBYNVy5cObgEcIPkJ006rwmyKCA",
+
+
   s3: {
     REGION: "YOUR_DEV_S3_UPLOADS_BUCKET_REGION",
     BUCKET: "YOUR_DEV_S3_UPLOADS_BUCKET_NAME"
