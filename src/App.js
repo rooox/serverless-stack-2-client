@@ -2,7 +2,6 @@ import React, { Component, Fragment } from "react";
 import { Auth } from "aws-amplify";
 import { Link, withRouter } from "react-router-dom";
 import { Nav, Navbar, NavItem } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
 import Routes from "./Routes";
 import "./App.css";
 
@@ -21,7 +20,7 @@ class App extends Component {
       await Auth.currentSession();
       this.userHasAuthenticated(true);
     }
-    catch(e) {
+    catch (e) {
       if (e !== 'No current user') {
         alert(e);
       }
@@ -61,15 +60,20 @@ class App extends Component {
           <Navbar.Collapse>
             <Nav pullRight>
               {this.state.isAuthenticated
-                ? <NavItem onClick={this.handleLogout}>Logout</NavItem>
+                ? <Fragment>
+                  <Link to="/settings">
+                    <NavItem>Settings</NavItem>
+                  </Link>
+                  <NavItem onClick={this.handleLogout}>Logout</NavItem>
+                </Fragment>
                 : <Fragment>
-                    <LinkContainer to="/signup">
-                      <NavItem>Signup</NavItem>
-                    </LinkContainer>
-                    <LinkContainer to="/login">
-                      <NavItem>Login</NavItem>
-                    </LinkContainer>
-                  </Fragment>
+                  <Link to="/signup">
+                    <NavItem>Signup</NavItem>
+                  </Link>
+                  <Link to="/login">
+                    <NavItem>Login</NavItem>
+                  </Link>
+                </Fragment>
               }
             </Nav>
           </Navbar.Collapse>
@@ -78,6 +82,7 @@ class App extends Component {
       </div>
     );
   }
+
 }
 
 export default withRouter(App);
