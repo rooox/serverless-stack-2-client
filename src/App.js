@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import { Auth } from "aws-amplify";
 import { Link, withRouter } from "react-router-dom";
 import { Nav, Navbar, NavItem } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 import Routes from "./Routes";
 import "./App.css";
 
@@ -61,18 +62,18 @@ class App extends Component {
             <Nav pullRight>
               {this.state.isAuthenticated
                 ? <Fragment>
-                  <Link to="/settings">
+                  <LinkContainer to="/settings">
                     <NavItem>Settings</NavItem>
-                  </Link>
+                  </LinkContainer>
                   <NavItem onClick={this.handleLogout}>Logout</NavItem>
                 </Fragment>
                 : <Fragment>
-                  <Link to="/signup">
+                  <LinkContainer to="/signup">
                     <NavItem>Signup</NavItem>
-                  </Link>
-                  <Link to="/login">
+                  </LinkContainer>
+                  <LinkContainer to="/login">
                     <NavItem>Login</NavItem>
-                  </Link>
+                  </LinkContainer>
                 </Fragment>
               }
             </Nav>
@@ -82,6 +83,7 @@ class App extends Component {
       </div>
     );
   }
+
 
 }
 
