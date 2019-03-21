@@ -1,38 +1,37 @@
 const dev = {
   STRIPE_KEY: "pk_test_pzhRgrSDBYNVy5cObgEcIPkJ006rwmyKCA",
-  STRIPE_KEY: "pk_test_pzhRgrSDBYNVy5cObgEcIPkJ006rwmyKCA",
 
 
   s3: {
-    REGION: "YOUR_DEV_S3_UPLOADS_BUCKET_REGION",
-    BUCKET: "YOUR_DEV_S3_UPLOADS_BUCKET_NAME"
+    REGION: "us-east-2",
+    BUCKET: "notes-react-app-from-users"
   },
   apiGateway: {
-    REGION: "YOUR_DEV_API_GATEWAY_REGION",
-    URL: "YOUR_DEV_API_GATEWAY_URL"
+    REGION: "us-east-2",
+    URL: "https://jxzhwzxqg6.execute-api.us-east-2.amazonaws.com/prod"
   },
   cognito: {
-    REGION: "YOUR_DEV_COGNITO_REGION",
-    USER_POOL_ID: "YOUR_DEV_COGNITO_USER_POOL_ID",
-    APP_CLIENT_ID: "YOUR_DEV_COGNITO_APP_CLIENT_ID",
-    IDENTITY_POOL_ID: "YOUR_DEV_IDENTITY_POOL_ID"
+    REGION: "us-east-2",
+    USER_POOL_ID: "us-east-2_noDPVl6MD",
+    APP_CLIENT_ID: "4llaqua0eetgf7hc9temgmimu4",
+    IDENTITY_POOL_ID: "us-east-2:c7544e71-e171-45f0-9fea-69574b56bb50"
   }
 };
 
 const prod = {
   s3: {
-    REGION: "YOUR_PROD_S3_UPLOADS_BUCKET_REGION",
-    BUCKET: "YOUR_PROD_S3_UPLOADS_BUCKET_NAME"
+    REGION: "us-east-2",
+    BUCKET: "notes-react-app-from-users"
   },
   apiGateway: {
-    REGION: "YOUR_PROD_API_GATEWAY_REGION",
-    URL: "YOUR_PROD_API_GATEWAY_URL"
+    REGION: "us-east-2",
+    URL: "https://jxzhwzxqg6.execute-api.us-east-2.amazonaws.com/prod"
   },
   cognito: {
-    REGION: "YOUR_PROD_COGNITO_REGION",
-    USER_POOL_ID: "YOUR_PROD_COGNITO_USER_POOL_ID",
-    APP_CLIENT_ID: "YOUR_PROD_COGNITO_APP_CLIENT_ID",
-    IDENTITY_POOL_ID: "YOUR_PROD_IDENTITY_POOL_ID"
+    REGION: "us-east-2",
+    USER_POOL_ID: "us-east-2_noDPVl6MD",
+    APP_CLIENT_ID: "4llaqua0eetgf7hc9temgmimu4",
+    IDENTITY_POOL_ID: "us-east-2:c7544e71-e171-45f0-9fea-69574b56bb50"
   }
 };
 
