@@ -19,6 +19,8 @@ const dev = {
 };
 
 const prod = {
+  STRIPE_KEY: "pk_test_pzhRgrSDBYNVy5cObgEcIPkJ006rwmyKCA",
+
   s3: {
     REGION: "us-east-2",
     BUCKET: "notes-react-app-from-users"
